@@ -1,0 +1,25 @@
+.global-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.global-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.global-nav ul li {
+    margin: 0 0.5rem;
+}
+
+.nav-kurv {
+    align-items: center;
+}
+
+.nav-kurv a {
+    font-size: 1.8rem;
+}
