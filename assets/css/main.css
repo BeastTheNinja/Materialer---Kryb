@@ -128,6 +128,7 @@ a:hover{
     padding: 1rem;
     text-align: center;
 }
+/* #endregion */
 /* #region MAIN FOOTER  */
 .site-footer {
     display: flex;
@@ -158,11 +159,15 @@ a:hover{
 }
 /* #endregion */
 /* #region opskrifter */
+
 .slider-container {
   position: relative;
   width: 600px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 5rem;
+  margin: 2rem;
 }
 
 .slider-wrapper {
@@ -187,3 +192,64 @@ a:hover{
   color: #333;
   user-select: none;
 }
+/* #endregion */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner: artikel og formular */
+    gap: 2rem; /* Afstand mellem kolonnerne */
+    align-items: start; /* Juster indholdet til toppen */
+    padding: 3rem; /* Mere plads omkring indholdet */
+    background-color: #f9f9f9; /* Lys baggrund */
+    border-radius: 10px; /* Runde hjørner */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Let skygge */
+    max-width: 1200px; /* Begræns bredden */
+    margin: 0 auto; /* Centrer containeren */
+}
+
+.contact-container article {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    padding-right: 1rem; /* Lidt ekstra afstand til højre */
+}
+
+.contact-container form {
+    display: grid;
+    grid-template-columns: 1fr; /* Enkelt kolonne layout */
+    gap: 1rem; /* Afstand mellem inputfelter */
+}
+
+.contact-container form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-container form input,
+.contact-container form textarea,
+.contact-container form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Sørg for, at felterne fylder hele bredden */
+    box-sizing: border-box; /* Inkluder padding i bredden */
+}
+
+.contact-container form textarea {
+    resize: none; /* Deaktiver resizing */
+    height: 100px; /* Fast højde til tekstområdet */
+}
+
+.contact-container form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.contact-container form button:hover {
+    background-color: #555;
+}
+
