@@ -142,4 +142,48 @@ a:hover{
     height: 30px;
     filter: invert(0); /* Gør sorte ikoner hvide */
 }
+/* #endregion */
+/* #region ABOUT */
+.om-kryb-indhold{
+    margin: 0;
+    padding: 0;
+}
+.om-kryb-indhold figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 
+}
+/* #endregion */
+/* #region opskrifter */
+.slider-container {
+  position: relative;
+  width: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slider img {
+  width: 200px; /* 600px / 3 billeder */
+  height: auto;
+}
+
+.arrow {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #333;
+  user-select: none;
+}
