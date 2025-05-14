@@ -1,3 +1,4 @@
+@import url(reset.css);
 @import url(navbar.css);
 /* #region GLOBAL STYLES */
 body{
@@ -28,6 +29,8 @@ a{
     font-size: 1.5rem;
     font-weight: 600;
     padding: 1rem 2rem;
+    width: 100%;
+    height: auto;
 }
 /* #endregion */
 /* #region Global HEADER */
@@ -154,8 +157,13 @@ a{
 }
 /* #endregion */
 /* #region opskrifter */
+.Opskrifter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .slider-container {
-  width: 600px;
+  width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,7 +182,7 @@ a{
 }
 
 .slider img {
-  width: 200px; /* 600px / 3 billeder */
+  width: 600px; /* 600px / 3 billeder */
   height: auto;
 }
 
@@ -249,12 +257,5 @@ a{
 /* #endregion */
 /* #region footer */
 .global-footer{
-display: block;
- margin: 1rem;
- pad: 1rem;
-}
-.social{
-    display: flex;
-    justify-content: center;
-    height: auto;
+    
 }
