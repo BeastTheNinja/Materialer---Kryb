@@ -29,39 +29,60 @@ prevBtn.addEventListener("click", () => {
   updateSlider();
 });
 // -----------------------------------------------------------------------------------------------------------
-document.getElementById('firstname').addEventListener('input', validateFirstName);
-document.getElementById('email').addEventListener('input', validateEmail);
+const firstnameInput = document.getElementById('firstname');
+    const emailInput = document.getElementById('email');
+    const commentInput = document.getElementById('comment');
 
-function validateFirstName() {
-    const firstName = document.getElementById('firstname').value;
-    if (firstName.length < 2) {
-        // alert('Fornavn skal være mindst 2 karakterer');
+    firstnameInput.addEventListener('input', validateFirstName);
+    emailInput.addEventListener('input', validateEmail);
+    commentInput.addEventListener('input', validateComment);
+
+    function showError(id, show) {
+        const element = document.getElementById(id);
+        element.style.display = show ? 'block' : 'none';
     }
-}
 
-
-function validateEmail() {
-    const email = document.getElementById('email').value;
-    const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!pattern.test(email)) {
-        // alert('Indtast en gyldig emailadresse');
+    function validateFirstName() {
+        const firstName = firstnameInput.value.trim();
+        if (firstName.length < 2) {
+            showError('firstname-error', true);
+            return false;
+        } else {
+            showError('firstname-error', false);
+            return true;
+        }
     }
-}
 
-document.getElementById('myForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Stop formularet fra at blive sendt, før validering
-    validateForm();
-});
-    
-
-function validateForm() {
-    const firstName = document.getElementById('firstname').value;
-    const email = document.getElementById('email').value;
-
-    if (firstName.length >= 2 && /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-        alert('Formularen er valideret korrekt');
-        // Eventuelt sende formularen eller noget andet
-    } else {
-        alert('Udfyld venligst alle felter korrekt');
+    function validateEmail() {
+        const email = emailInput.value.trim();
+        const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const isValid = pattern.test(email);
+        showError('email-error', !isValid);
+        return isValid;
     }
-}
+
+    function validateComment() {
+        const comment = commentInput.value.trim();
+        const isValid = comment.length > 0;
+        showError('comment-error', !isValid);
+        return isValid;
+    }
+
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Forhindrer almindelig indsendelse
+
+        const isNameValid = validateFirstName();
+        const isEmailValid = validateEmail();
+        const isCommentValid = validateComment();
+
+        if (isNameValid && isEmailValid && isCommentValid) {
+            const firstName = firstnameInput.value.trim();
+            const email = emailInput.value.trim();
+            const comment = commentInput.value.trim();
+
+            const subject = encodeURIComponent('Kommentar fra ' + firstName);
+            const body = encodeURIComponent(`Navn: ${firstName}\nEmail: ${email}\nKommentar: ${comment}`);
+            const mailtoLink = `mailto:sebastianlarsen21@outlook.com?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+        }
+    });

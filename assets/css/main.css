@@ -38,7 +38,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: #e3e3e3;
     padding: 1rem;
     position: relative;
 }
@@ -207,7 +207,7 @@ a{
     gap: 2rem; /* Afstand mellem kolonnerne */
     align-items: start; /* Juster indholdet til toppen */
     padding: 3rem; /* Mere plads omkring indholdet */
-    background-color: gray; /* Lys baggrund */
+    background-color: #e3e3e3; /* Lys baggrund */
     border-radius: 10px; /* Runde hjørner */
     box-shadow: 0 4px 6px #0000001a; /* Let skygge */
     max-width: 1200px; /* Begræns bredden */
@@ -260,22 +260,36 @@ a{
 .contact-container form button:hover {
     background-color: #555;
 }
+ .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 2px;
+        margin-bottom: 10px;
+        display: none;
+    }
 /* #endregion */
 /* #region footer */
 .global-footer{
+    background-color: #e3e3e3;
+    border: #000 solid;
+    margin: 0.5rem;
+    padding: 1rem;
+}
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #a7a7a7;
+    padding: 0.5rem;
 }
 .social{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 25%;
+    width: 50%;
     height: auto;
-    gap: 1rem;
+    gap: 10rem;
     padding: 1rem;
+    align-items: start;
     
 }
 .social a{
@@ -284,5 +298,12 @@ a{
 .logo{
     width: 25%;
     height: auto;
+    padding: 1rem;
+}
+.links{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 23rem;
+    margin: 1rem;
     padding: 1rem;
 }
