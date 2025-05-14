@@ -2,12 +2,12 @@ const slider = document.getElementById("slider");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
-const totalImages = 7;
+const totalImages = 6;
 const imagesToShow = 3;
 let currentIndex = 0;
 
 function updateSlider() {
-  const slideWidth = 200; // samme som billedets bredde
+  const slideWidth = 280; // samme som billedets bredde
   slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 

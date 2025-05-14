@@ -161,6 +161,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .slider-container {
   width: 900px;
@@ -192,9 +193,14 @@ a{
   margin: 0 10px;
   color: #333;
   user-select: none;
+
 }
 /* #endregion */
 /* #region kontakt */
+.contact h2{
+    display: flex;
+    justify-content: center;
+}
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner: artikel og formular */
@@ -257,5 +263,26 @@ a{
 /* #endregion */
 /* #region footer */
 .global-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #a7a7a7;
+}
+.social{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 25%;
+    height: auto;
+    gap: 1rem;
+    padding: 1rem;
     
+}
+.social a{
+    padding: 0;
+}
+.logo{
+    width: 25%;
+    height: auto;
+    padding: 1rem;
 }
