@@ -29,11 +29,6 @@ a{
     font-weight: 600;
     padding: 1rem 2rem;
 }
-a:hover{
-    color: #fff;
-    background-color: #000;
-    border-radius: 1px;
-}
 /* #endregion */
 /* #region Global HEADER */
 .main-header {
@@ -159,9 +154,7 @@ a:hover{
 }
 /* #endregion */
 /* #region opskrifter */
-
 .slider-container {
-  position: relative;
   width: 600px;
   display: flex;
   justify-content: center;
@@ -193,15 +186,16 @@ a:hover{
   user-select: none;
 }
 /* #endregion */
+/* #region kontakt */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner: artikel og formular */
     gap: 2rem; /* Afstand mellem kolonnerne */
     align-items: start; /* Juster indholdet til toppen */
     padding: 3rem; /* Mere plads omkring indholdet */
-    background-color: #f9f9f9; /* Lys baggrund */
+    background-color: gray; /* Lys baggrund */
     border-radius: 10px; /* Runde hjørner */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Let skygge */
+    box-shadow: 0 4px 6px #0000001a; /* Let skygge */
     max-width: 1200px; /* Begræns bredden */
     margin: 0 auto; /* Centrer containeren */
 }
@@ -230,7 +224,7 @@ a:hover{
 .contact-container form button {
     padding: 0.8rem;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid gray;
     border-radius: 5px;
     width: 100%; /* Sørg for, at felterne fylder hele bredden */
     box-sizing: border-box; /* Inkluder padding i bredden */
@@ -252,4 +246,15 @@ a:hover{
 .contact-container form button:hover {
     background-color: #555;
 }
-
+/* #endregion */
+/* #region footer */
+.global-footer{
+display: block;
+ margin: 1rem;
+ pad: 1rem;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
