@@ -293,10 +293,11 @@ span{
 .social{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 50%;
+    width: 40%;
     height: auto;
     gap: 10rem;
     padding: 1rem;
+    margin: 2rem;
     align-items: start;
     
 }
@@ -306,7 +307,8 @@ span{
 .logo{
     width: 25%;
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
+    margin: 2rem;
 }
 .links{
     display: grid;
@@ -317,5 +319,9 @@ span{
 }
 .links h2{
  font-size: 2rem;
+ margin: 0.5rem;
+}
+.links p{
+    margin: 0.5rem;
 }
 /* #endregion */
