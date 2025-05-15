@@ -1,14 +1,15 @@
 @import url(reset.css);
 @import url(navbar.css);
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 /* #region GLOBAL STYLES */
 body{
-    font-family: sans-serif, Arial, Helvetica, serif;
+    font-family: 'montserrat';
     margin: 0;
     padding: 0;
     background-color: #ffffff;
 }
 h1, h2, h3, h4, h5, h6{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -69,6 +70,7 @@ span{
 .search-input-container {
     position: relative;
     width: 100%;
+    right: 16px;
 }
 
 /* Inputfelt */
@@ -78,7 +80,7 @@ span{
 }
 .search-input-container ::placeholder{
     position: relative;
-    left: 81%;
+    left: 10%;
 }
 
 /* Ikon oven på inputfelt */
@@ -233,7 +235,7 @@ span{
 .contact-container form {
     display: grid;
     grid-template-columns: 1fr; /* Enkelt kolonne layout */
-    gap: 1rem; /* Afstand mellem inputfelter */
+    gap: 2rem; /* Afstand mellem inputfelter */
 }
 
 .contact-container form label {
@@ -280,15 +282,15 @@ span{
 /* #region footer */
 .global-footer{
     background-color: #e3e3e3;
-    margin: 2%;
-    padding: 2%;
+    margin: 1.5rem;
 }
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
 }
 .social{
     display: grid;
@@ -313,15 +315,7 @@ span{
 .links{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 23rem;
-    margin: 1rem;
-    padding: 1rem;
+    gap: 5rem;
 }
-.links h2{
- font-size: 2rem;
- margin: 0.5rem;
-}
-.links p{
-    margin: 0.5rem;
-}
+
 /* #endregion */
