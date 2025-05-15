@@ -32,6 +32,9 @@ a{
     width: 100%;
     height: auto;
 }
+span{
+    font-weight: bold;
+}
 /* #endregion */
 /* #region Global HEADER */
 .main-header {
@@ -71,15 +74,18 @@ a{
 /* Inputfelt */
 .search-input-container input {
     width: 100%;
-    padding: 0.5rem 1rem 0.1rem 0rem; /* Ekstra plads til ikonet til højre */
     font-size: 1.2rem;
+}
+.search-input-container ::placeholder{
+    position: relative;
+    left: 81%;
 }
 
 /* Ikon oven på inputfelt */
 .search-icon {
     position: absolute;
-    right: 10px;
     top: 50%;
+    left: 5px;
     transform: translateY(-50%);
     pointer-events: none;
     font-size: 1.2rem;
@@ -107,6 +113,10 @@ a{
 }
 /* #endregion */
 /* #region PRODUKTER */
+.produkter{
+    margin: 2rem;
+    padding: 2rem;
+}
 .produkter h2 {
     text-align: center;
     margin: 3rem;
@@ -127,36 +137,35 @@ a{
     text-align: center;
 }
 /* #endregion */
-/* #region MAIN FOOTER  */
-.site-footer {
-    display: flex;
-    background-color: #efefef; /* Sort baggrund */
-    color: black; /* Hvid tekst */
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-}
-/* Ikoner i footer */
-.footer-right img {
-    width: 30px;
-    height: 30px;
-    filter: invert(0); /* Gør sorte ikoner hvide */
-}
-/* #endregion */
 /* #region ABOUT */
+.om-kryb h2{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
 .om-kryb-indhold{
-    margin: 0;
-    padding: 0;
+   margin: 2rem;
+   padding: 2rem;
 }
 .om-kryb-indhold figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.om-kryb-indhold h5{
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 1rem;
+}
+.om-kryb-indhold p{
+    padding: 1rem;
 }
 /* #endregion */
 /* #region opskrifter */
+.headOpskrift{
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem;
+}
 .Opskrifter{
     display: flex;
     justify-content: center;
@@ -271,9 +280,8 @@ a{
 /* #region footer */
 .global-footer{
     background-color: #e3e3e3;
-    border: #000 solid;
-    margin: 0.5rem;
-    padding: 1rem;
+    margin: 2%;
+    padding: 2%;
 }
 .container{
     display: flex;
@@ -307,3 +315,7 @@ a{
     margin: 1rem;
     padding: 1rem;
 }
+.links h2{
+ font-size: 2rem;
+}
+/* #endregion */
