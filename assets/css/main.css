@@ -43,7 +43,7 @@ span{
     justify-content: space-between;
     align-items: center;
     background-color: #e3e3e3;
-    padding: 1rem;
+    padding: 2rem;
     position: relative;
 }
 
@@ -70,7 +70,7 @@ span{
 .search-input-container {
     position: relative;
     width: 100%;
-    right: 16px;
+    right: 33px;
 }
 
 /* Inputfelt */
@@ -336,9 +336,10 @@ span{
     margin: 2rem;
 }
 .links{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1rem;
 }
-
 /* #endregion */
