@@ -180,7 +180,8 @@ span{
   justify-content: center;
   align-items: center;
   padding: 5rem;
-  margin: 2rem;
+  margin: 1rem;
+  gap: 1rem;
 }
 
 .slider-wrapper {
@@ -204,7 +205,6 @@ span{
   margin: 0 10px;
   color: #333;
   user-select: none;
-
 }
 /* #endregion */
 /* #region kontakt */
