@@ -118,6 +118,7 @@ span{
 .produkter{
     margin: 2rem;
     padding: 2rem;
+    border-bottom: 1px solid #ccc;
 }
 .produkter h2 {
     text-align: center;
@@ -154,6 +155,9 @@ span{
 }
 /* #endregion */
 /* #region ABOUT */
+.om-kryb{
+    border-bottom: 1px solid #ccc;
+}
 .om-kryb h2{
     text-align: center;
     padding: 1rem;
@@ -186,7 +190,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    border-bottom: 1px solid #ccc;
 }
 .slider-container {
   width: 900px;
@@ -222,6 +226,11 @@ span{
 }
 /* #endregion */
 /* #region kontakt */
+.contact{
+    border-bottom: 1px solid #ccc;
+    padding: 5rem;
+    margin: 1rem;
+}
 .contact h2{
     display: flex;
     justify-content: center;
