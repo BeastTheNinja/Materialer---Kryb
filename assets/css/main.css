@@ -134,9 +134,9 @@ span{
 }
 .produkt-item {
     border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 1rem;
     text-align: center;
+    border: none;
 }
 .produkt-item button{
      margin-left: 1rem;
